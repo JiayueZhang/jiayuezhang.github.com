@@ -1,7 +1,26 @@
-# Blog of Song Kong
-This is a Jekyll theme called Ice bear.
+Fresh is a free blog template for Jekyll
+=============================
 
-To learn how to install and use this theme, please check out the [installation guide](http://kongsong.me/blog/ice-bear-jekyll-theme/) for more information.
+![](assets/img/fresh.jpg)
+
+# Demo
+
+![GIF](assets/img/fresh.gif)
+
+View this jekyll theme in action [here](http://artemsheludko.pw/fresh/)
+
+Integrations
+  - [Google Fonts](https://fonts.google.com/)
+  - [Disqus](https://disqus.com/)
+  - [Font Awesome](http://fontawesome.io/)
+  - Social media links
+
+# How to Use
+
+  For those unfamiliar with how Jekyll works, check out [jekyllrb.com](https://jekyllrb.com/) for all the details,
+  or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/),
+  and [creating pages](https://jekyllrb.com/docs/pages/).
 
 ## License
-This theme is open source under MIT License. So feel free to use this Jekyll theme on your site, although linking back to me is more than welcomed.
+
+GNU General Public License v3.0
