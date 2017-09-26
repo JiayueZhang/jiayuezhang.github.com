@@ -7,7 +7,7 @@ tags: Jekyll
 comments: true
 ---
 
-Since all the fancy blogs have comment function, why not take a shot? A simple to implement it is to use [Disqus][disqus].
+Since all the fancy blogs have comment function, why not take a shot? A simple way to implement it is to use [Disqus][disqus].
 
 ## 1
 Sign up a Disqus account and choose "I want to install Disqus on my site". Then fill out the form and select a plan. I chose the commericial-free plan and the Jekyll platfrom.
