@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>How to add comments in Jekyll</title>
-  <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+  <meta name="description" content="Since all the fancy blogs have comment function, why not take a shot? A simple to implement it is to use Disqus.">
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/jekyll/update/2017/09/25/welcome-to-jekyll.html">
@@ -80,20 +80,67 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+    <p>Since all the fancy blogs have comment function, why not take a shot? A simple to implement it is to use <a href="https://disqus.com/">Disqus</a>.</p>
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<h2 id="1">1</h2>
+<p>Sign up a Disqus account and choose “I want to install Disqus on my site”. Then fill out the form and select a plan. I chose the commericial-free plan and the Jekyll platfrom.</p>
+<h2 id="2">2</h2>
+<p>Add <code class="highlighter-rouge">"comments: true"</code> to your YAML Front Matter.</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">layout: </span><span class="n">post</span>
+<span class="ss">title:  </span><span class="s2">"How to add comments in Jekyll"</span>
+<span class="ss">date:   </span><span class="mi">2017</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">25</span> <span class="mi">18</span><span class="p">:</span><span class="mo">05</span><span class="p">:</span><span class="mi">45</span> <span class="o">-</span><span class="mo">0400</span>
+<span class="ss">categories: </span><span class="n">jekyll</span> <span class="n">update</span>
+<span class="ss">tags: </span><span class="no">Jekyll</span>
+<span class="ss">comments: </span><span class="kp">true</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<h2 id="3">3</h2>
+<p>Insert a ｛% if page.comments %｝and a｛% endif %｝tag in your post. And in between them, copy and paste the Universal Embed Code.</p>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"disqus_thread"</span><span class="o">&gt;&lt;</span><span class="sr">/div&gt;
+&lt;script&gt;
 
+/</span><span class="o">**</span>
+<span class="o">*</span>  <span class="no">RECOMMENDED</span> <span class="no">CONFIGURATION</span> <span class="no">VARIABLES</span><span class="p">:</span> <span class="no">EDIT</span> <span class="no">AND</span> <span class="no">UNCOMMENT</span> <span class="no">THE</span> <span class="no">SECTION</span> <span class="no">BELOW</span> <span class="no">TO</span> <span class="no">INSERT</span> <span class="no">DYNAMIC</span> <span class="no">VALUES</span> <span class="no">FROM</span> <span class="no">YOUR</span> <span class="no">PLATFORM</span> <span class="no">OR</span> <span class="no">CMS</span><span class="p">.</span>
+<span class="nf">*</span>  <span class="no">LEARN</span> <span class="no">WHY</span> <span class="no">DEFINING</span> <span class="no">THESE</span> <span class="no">VARIABLES</span> <span class="no">IS</span> <span class="no">IMPORTANT</span><span class="p">:</span> <span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">disqus</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">admin</span><span class="o">/</span><span class="n">universalcode</span><span class="o">/</span><span class="c1">#configuration-variables*/</span>
+<span class="sr">/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  /</span><span class="o">/</span> <span class="no">Replace</span> <span class="no">PAGE_URL</span> <span class="n">with</span> <span class="n">your</span> <span class="n">page</span><span class="s1">'s canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page'</span><span class="n">s</span> <span class="n">unique</span> <span class="n">identifier</span> <span class="n">variable</span>
+<span class="p">};</span>
+<span class="o">*</span><span class="sr">/
+(function() { /</span><span class="o">/</span> <span class="no">DON</span><span class="s1">'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('</span><span class="n">script</span><span class="s1">');
+s.src = '</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">https</span><span class="o">-</span><span class="n">jiayuezhang</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="n">io</span><span class="p">.</span><span class="nf">disqus</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">embed</span><span class="p">.</span><span class="nf">js</span><span class="s1">';
+s.setAttribute('</span><span class="n">data</span><span class="o">-</span><span class="n">timestamp</span><span class="err">'</span><span class="p">,</span> <span class="o">+</span><span class="n">new</span> <span class="no">Date</span><span class="p">());</span>
+<span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="nf">head</span> <span class="o">||</span> <span class="n">d</span><span class="p">.</span><span class="nf">body</span><span class="p">).</span><span class="nf">appendChild</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+<span class="p">})();</span>
+<span class="o">&lt;</span><span class="sr">/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="https:/</span><span class="o">/</span><span class="n">disqus</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="p">?</span><span class="n">ref_noscript</span><span class="s2">"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</span></code></pre></figure>
+
+<p>Then you will have your own comment system with Diqus.</p>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-jiayuezhang-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
   </div>
 

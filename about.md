@@ -8,7 +8,7 @@ Hi stranger,
 
 Welcome to my planet. I'm a master student in computer engineering.
 
-This page is built with Jekyll. If you are interested, check the links below.
+This page is built with Jekyll. If you are interested, check theese links.
 You can find the source code for Minima at GitHub:
 [jekyll][jekyll-organization] /
 [minima](https://github.com/jekyll/minima)
